@@ -1,0 +1,66 @@
+<!--
+  Generated template for the ContactDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>contact-details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!contact.id">Loading...</div>
+  <div *ngIf="contact.id">
+
+    <ion-card>
+      <img [src]="contact.picture" class="center">
+
+      <ion-card-content>
+        <ion-card-title>
+          {{ contact | fullname }}
+        </ion-card-title>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>Born on</ion-col>
+            <ion-col col-8>{{ contact.dob }}
+              <br> ({{contact.dob | age : 2}})
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-4>Email id</ion-col>
+            <ion-col col-8>{{ contact.email }}</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-4>Phone#</ion-col>
+            <ion-col col-8>{{ contact.phone }}</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-4>Address</ion-col>
+            <ion-col col-8>{{ contact.address }}</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-8>{{ contact.city }}
+              <br> {{contact.state}} - {{ contact.country }}
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+      </ion-card-content>
+    </ion-card>
+
+    {{ contact | json }}
+
+  </div>
+</ion-content>
