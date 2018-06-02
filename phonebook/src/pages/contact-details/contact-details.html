@@ -25,6 +25,15 @@
           {{ contact | fullname }}
         </ion-card-title>
 
+        <ion-fab top right>
+          <button color="primary" ion-fab>
+            <ion-icon name="ios-create-outline"></ion-icon>
+          </button>
+          <button color="danger" ion-fab (click)="confirmAndDelete()">
+            <ion-icon name="ios-trash"></ion-icon>
+          </button>
+        </ion-fab>
+
         <ion-grid>
           <ion-row>
             <ion-col col-4>Born on</ion-col>

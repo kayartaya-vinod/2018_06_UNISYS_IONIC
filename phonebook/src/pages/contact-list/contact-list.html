@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Your contacts...</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let c of contacts" 
+      (click)="showContactDetailsFor(c.id)">
+
+      <ion-avatar item-start>
+        <img [src]="c.picture">
+      </ion-avatar>
+      <h2>{{ c | fullname }}</h2>
+      <p>{{ c.email }}</p>
+      <p>{{ c.phone }}</p>
+      
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -10,6 +10,7 @@ import { AboutPageModule } from '../pages/about/about.module';
 import { ContactsProvider } from '../providers/contacts/contacts';
 import { ContactDetailsPageModule } from '../pages/contact-details/contact-details.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactListPageModule } from '../pages/contact-list/contact-list.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     AboutPageModule,
-    ContactDetailsPageModule
+    ContactDetailsPageModule,
+    ContactListPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,8 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     ContactsProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

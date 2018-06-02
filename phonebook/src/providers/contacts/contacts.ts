@@ -7,11 +7,18 @@ const baseUrl = 'http://localhost:3000/contacts/';
 
 @Injectable()
 export class ContactsProvider {
-
   constructor(private http: HttpClient) {
   }
 
-  getById(id): Observable<any> {
+  getAll(): Observable<any> {
+    return this.http.get(baseUrl);
+  }
+
+  getById(id: number): Observable<any> {
     return this.http.get(baseUrl + id);
+  }
+
+  delete(id: number): Observable<any> {
+    return this.http.delete(baseUrl + id);
   }
 }
