@@ -1,34 +1,6 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "first_name": "Kelsi",
-      "last_name": "Sylvester",
-      "email": "ksylvester0@addtoany.com",
-      "gender": "Female",
-      "phone": "7276401622",
-      "dob": "1981-01-17",
-      "address": "2 Bay Junction",
-      "city": "Saint Petersburg",
-      "state": "Florida",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/women/1.jpg"
-    },
-    {
-      "id": 2,
-      "first_name": "Erik",
-      "last_name": "McClinton",
-      "email": "emcclinton1@sciencedaily.com",
-      "gender": "Male",
-      "phone": "7853707673",
-      "dob": "1998-02-28",
-      "address": "561 Hoepker Plaza",
-      "city": "Topeka",
-      "state": "Kansas",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/men/2.jpg"
-    },
-    {
       "id": 3,
       "first_name": "Lucille",
       "last_name": "Strathearn",
