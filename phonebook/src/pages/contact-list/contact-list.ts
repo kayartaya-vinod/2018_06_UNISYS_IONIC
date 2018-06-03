@@ -23,8 +23,9 @@ export class ContactListPage {
       .subscribe(data => this.contacts = data);
   }
 
-  showContactDetailsFor(id: number) {
-    this.navCtrl.push(ContactDetailsPage, { id });
+  showContactDetailsFor(contactId: number) {
+    this.navCtrl.push(ContactDetailsPage, 
+      { id: contactId, callback: ()=>this.ionViewDidLoad() });
   }
 
 }

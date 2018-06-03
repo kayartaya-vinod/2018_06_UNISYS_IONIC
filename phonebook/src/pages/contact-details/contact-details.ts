@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ContactsProvider } from '../../providers/contacts/contacts';
+import { AddEditContactPage } from '../add-edit-contact/add-edit-contact';
 
 @IonicPage()
 @Component({
@@ -9,6 +10,7 @@ import { ContactsProvider } from '../../providers/contacts/contacts';
 })
 export class ContactDetailsPage {
 
+  callback: any;
   contact = {};
 
   constructor(
@@ -19,6 +21,8 @@ export class ContactDetailsPage {
   }
 
   ionViewDidLoad() {
+    this.callback = this.navParams.data['callback'];
+    
     this.cPrvdr.getById(this.navParams.data['id'])
       .subscribe(data => this.contact = data);
   }
@@ -35,6 +39,9 @@ export class ContactDetailsPage {
             // delete the record and pop this page off
             this.cPrvdr.delete(this.contact['id'])
               .subscribe(() => {
+                if(this.callback && typeof this.callback=='function') {
+                  this.callback();
+                }
                 this.navCtrl.pop();
               });
           }
@@ -45,6 +52,11 @@ export class ContactDetailsPage {
         }
       ]
     }).present();
+  }
+
+  edit() {
+    this.navCtrl.push(AddEditContactPage, 
+      {mode: 'EDIT', contact: this.contact});
   }
 
 }

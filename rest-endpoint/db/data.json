@@ -1,62 +1,6 @@
 {
   "contacts": [
     {
-      "id": 3,
-      "first_name": "Lucille",
-      "last_name": "Strathearn",
-      "email": "lstrathearn2@utexas.edu",
-      "gender": "Female",
-      "phone": "5088420355",
-      "dob": "1997-11-22",
-      "address": "4154 Bartillon Way",
-      "city": "Newton",
-      "state": "Massachusetts",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/women/3.jpg"
-    },
-    {
-      "id": 4,
-      "first_name": "Jone",
-      "last_name": "Oldcote",
-      "email": "joldcote3@t.co",
-      "gender": "Male",
-      "phone": "2259846440",
-      "dob": "1974-03-26",
-      "address": "41913 Linden Center",
-      "city": "Baton Rouge",
-      "state": "Louisiana",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/men/4.jpg"
-    },
-    {
-      "id": 5,
-      "first_name": "Rosie",
-      "last_name": "Westwick",
-      "email": "rwestwick4@economist.com",
-      "gender": "Female",
-      "phone": "6087267807",
-      "dob": "1999-06-27",
-      "address": "0 East Circle",
-      "city": "Madison",
-      "state": "Wisconsin",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/women/5.jpg"
-    },
-    {
-      "id": 6,
-      "first_name": "Enos",
-      "last_name": "Bleackly",
-      "email": "ebleackly5@csmonitor.com",
-      "gender": "Male",
-      "phone": "4792662360",
-      "dob": "1987-09-28",
-      "address": "796 Pleasure Crossing",
-      "city": "Fort Smith",
-      "state": "Arkansas",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/men/6.jpg"
-    },
-    {
       "id": 7,
       "first_name": "Bonita",
       "last_name": "Cyples",

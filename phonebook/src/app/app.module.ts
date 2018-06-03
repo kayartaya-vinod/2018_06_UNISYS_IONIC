@@ -11,6 +11,8 @@ import { ContactsProvider } from '../providers/contacts/contacts';
 import { ContactDetailsPageModule } from '../pages/contact-details/contact-details.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactListPageModule } from '../pages/contact-list/contact-list.module';
+import { AddEditContactPageModule } from '../pages/add-edit-contact/add-edit-contact.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { ContactListPageModule } from '../pages/contact-list/contact-list.module
     HomePage
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     AboutPageModule,
     ContactDetailsPageModule,
     ContactListPageModule,
+    AddEditContactPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Firstname</ion-label>
+      <ion-input type="text"
+        [(ngModel)]="contact.first_name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Lastname</ion-label>
+      <ion-input type="text"
+        [(ngModel)]="contact.last_name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email address</ion-label>
+      <ion-input type="email"
+        [(ngModel)]="contact.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Phone number</ion-label>
+      <ion-input type="tel"
+        [(ngModel)]="contact.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Date of birth</ion-label>
+      <ion-input type="date"
+        [(ngModel)]="contact.dob"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
