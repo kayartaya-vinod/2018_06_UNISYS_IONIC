@@ -22,7 +22,7 @@ export class ContactDetailsPage {
 
   ionViewDidLoad() {
     this.callback = this.navParams.data['callback'];
-    
+
     this.cPrvdr.getById(this.navParams.data['id'])
       .subscribe(data => this.contact = data);
   }
@@ -39,7 +39,7 @@ export class ContactDetailsPage {
             // delete the record and pop this page off
             this.cPrvdr.delete(this.contact['id'])
               .subscribe(() => {
-                if(this.callback && typeof this.callback=='function') {
+                if (this.callback && typeof this.callback == 'function') {
                   this.callback();
                 }
                 this.navCtrl.pop();
@@ -55,8 +55,17 @@ export class ContactDetailsPage {
   }
 
   edit() {
-    this.navCtrl.push(AddEditContactPage, 
-      {mode: 'EDIT', contact: this.contact});
+    this.navCtrl.push(AddEditContactPage,
+      {
+        mode: 'EDIT', 
+        contact: this.contact,
+        callback: updatedContact => {
+          this.contact = updatedContact;
+          if(this.callback) {
+            this.callback();
+          }
+        }
+      });
   }
 
 }

@@ -11,6 +11,8 @@ export class FullnamePipe implements PipeTransform {
     if (!value) return '';
 
     let title = value['gender'] == 'Male' ? 'Mr.' : 'Ms.';
-    return `${title} ${value.first_name} ${value['last_name']}`;
+    let fname = value.first_name ? value.first_name : '';
+    let lname = value.last_name ? value.last_name : '';
+    return `${title} ${fname} ${lname}`;
   }
 }

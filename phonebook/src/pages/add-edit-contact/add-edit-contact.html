@@ -5,37 +5,83 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label stacked>Firstname</ion-label>
-      <ion-input type="text"
-        [(ngModel)]="contact.first_name"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label stacked>Lastname</ion-label>
-      <ion-input type="text"
-        [(ngModel)]="contact.last_name"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Email address</ion-label>
-      <ion-input type="email"
-        [(ngModel)]="contact.email"></ion-input>
-    </ion-item>
+  <form #f1="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Firstname</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.first_name" name="first_name" required minlength="3" #fname="ngModel"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Phone number</ion-label>
-      <ion-input type="tel"
-        [(ngModel)]="contact.phone"></ion-input>
-    </ion-item>
+      <div class="err" *ngIf="fname.errors && fname.dirty">
+        <div *ngIf="fname.errors.required">Firstname is required</div>
+        <div *ngIf="fname.errors.minlength">Minimum 3 letters required for firstname</div>
+      </div>
 
-    <ion-item>
-      <ion-label stacked>Date of birth</ion-label>
-      <ion-input type="date"
-        [(ngModel)]="contact.dob"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label stacked>Lastname</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.last_name" name="last_name"></ion-input>
+      </ion-item>
 
-  </ion-list>
+      <ion-item>
+        <ion-label stacked>Gender</ion-label>
+        <ion-select [(ngModel)]="contact.gender" name="gender">
+          <ion-option value="Male">Male</ion-option>
+          <ion-option value="Female">Female</ion-option>
+        </ion-select>
+      </ion-item>
 
+      <ion-item>
+        <ion-label stacked>Email address</ion-label>
+        <ion-input type="email" [(ngModel)]="contact.email" name="email" pattern="\\S+@\\S+\\.\\S+" #email="ngModel" required></ion-input>
+      </ion-item>
+
+      <div class="err" *ngIf="email.errors && email.dirty">
+        <div *ngIf="email.errors.required">Email is required</div>
+        <div *ngIf="email.errors.pattern">Not a valid email pattern</div>
+      </div>
+
+      <ion-item>
+        <ion-label stacked>Phone number</ion-label>
+        <ion-input type="tel" [(ngModel)]="contact.phone" 
+          name="phone" #phone="ngModel" pattern="\\d{10}"></ion-input>
+      </ion-item>
+
+      <div class="err" *ngIf="phone.errors && phone.dirty">
+        <div *ngIf="phone.errors.pattern">Must be 10 digits</div>
+      </div>
+
+      <ion-item>
+        <ion-label stacked>Date of birth</ion-label>
+        <ion-input type="date" [(ngModel)]="contact.dob" name="dob"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Address</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.address" name="address"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>City</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.city" name="city"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>State</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.state" name="state"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Country</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.country" name="country"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Picture URL</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.picture" name="picture"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button block="true" [disabled]="f1.invalid" ion-button (click)="save()">Save changes</button>
+  </form>
 </ion-content>

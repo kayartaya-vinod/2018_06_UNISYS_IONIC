@@ -8,9 +8,17 @@
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-input type="search" [(ngModel)]="keyword" 
+      placeholder="Search..."></ion-input>
+  </ion-item>
+
+  <h3 *ngIf="!(contacts | filter: keyword).length">No result!</h3>
+
   <ion-list>
 
-    <ion-item *ngFor="let c of contacts" 
+    <ion-item *ngFor="let c of (contacts | filter: keyword)" 
       (click)="showContactDetailsFor(c.id)">
 
       <ion-avatar item-start>

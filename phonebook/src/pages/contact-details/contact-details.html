@@ -18,7 +18,8 @@
   <div *ngIf="contact.id">
 
     <ion-card>
-      <img [src]="contact.picture" class="center">
+      <img [src]="contact.picture?contact.picture:'/assets/imgs/default_profile.jpg'" 
+      class="center">
 
       <ion-card-content>
         <ion-card-title>

@@ -6,7 +6,7 @@
       "last_name": "Cyples",
       "email": "bcyples6@purevolume.com",
       "gender": "Female",
-      "phone": "7025783353",
+      "phone": "7025783888",
       "dob": "1982-02-18",
       "address": "96 School Avenue",
       "city": "Henderson",
@@ -16,17 +16,17 @@
     },
     {
       "id": 8,
-      "first_name": "Sean",
+      "first_name": "Cean",
       "last_name": "Mattiussi",
       "email": "smattiussi7@unc.edu",
       "gender": "Male",
-      "phone": "9413169753",
+      "phone": "9413169000",
       "dob": "1999-11-22",
       "address": "2715 Nova Crossing",
       "city": "Port Charlotte",
       "state": "Florida",
       "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/men/8.jpg"
+      "picture": "https://i.pinimg.com/280x280_RS/c1/66/0a/c1660a21b7520bb61bcedb0b7971b397.jpg"
     },
     {
       "id": 9,
@@ -923,6 +923,42 @@
       "state": "Iowa",
       "country": "United States",
       "picture": "http://kvinod.com/old_ci/randomdata/images/women/75.jpg"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@example.com",
+      "gender": "Male",
+      "phone": "6085434120",
+      "dob": "1978-01-17",
+      "address": "887 Rieder Street",
+      "city": "Madison",
+      "state": "Wisconsin",
+      "country": "United States",
+      "picture": "http://kvinod.com/old_ci/randomdata/images/women/12.jpg",
+      "id": 76
+    },
+    {
+      "first_name": "Ramesh",
+      "last_name": "Kumar",
+      "gender": "Male",
+      "email": "ramesh@example.com",
+      "phone": "8765672234",
+      "dob": "1984-02-14",
+      "address": "Some street",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "picture": "https://www.telegraphindia.com/media/images/2018/05/25/ramesh.jpg",
+      "id": 77
+    },
+    {
+      "first_name": "Vinod",
+      "gender": "Male",
+      "email": "vinod@ivnod.co",
+      "phone": "9844083934",
+      "id": 78,
+      "last_name": "Kumar"
     }
   ]
 }
